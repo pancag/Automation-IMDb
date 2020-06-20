@@ -26,7 +26,7 @@ Será aberto um pop-up, neste pop-up clique na opção `Build` ou `Rebuild`.
 
 ## Executando um caso de teste
 
-Nessa estrutura de projeto todos os casos de teste ficam armazenados na pasta `DBB/Specs`, os arquivos tem a extensão `.feature`, os arquivos desde formato, são similares a esse:
+Nessa estrutura de projeto todos os casos de teste ficam armazenados na pasta `BDD/Specs`, os arquivos tem a extensão `.feature`, os arquivos desde formato, são similares a esse:
 
 ```specflow
 #language:pt-BR
