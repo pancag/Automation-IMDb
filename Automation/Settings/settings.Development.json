@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Automation": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "IMDb_URL": "https://www.imdb.com/"
+      }
+    }
+  }
+}

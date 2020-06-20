@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "Automation": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "BROWSER_TYPE": "CHROME",
+        "REMOTE_DRIVER": "NO",
+        "IMAGES_PATH": "C:\\Tests\\TestPrints\\",
+        "REPORTS_PATH": "C:\\Tests\\TestReports\\",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "REMOTE_DRIVER_ADDRESS": "http://localhost:4444/wd/hub",
+        "IMAGES_EXTENSION": ".png"
+      }
+    }
+  }
+}
