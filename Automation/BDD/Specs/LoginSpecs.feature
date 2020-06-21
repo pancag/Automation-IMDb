@@ -3,14 +3,14 @@ Funcionalidade:1 - Validacao_Login
 	teste de login no site IMDb
 
 Contexto: 
-	Dado Que acesso a homepage do IMDb
-	E clico em Sign In
-	E clico em Sign in with IMDb
+	
 
 @IMDb @Login
 Esquema do Cenário: 1.1_Efetuar Login (Validacoes)
-	Quando informo email <email> e senha <senha>
-	E clico em Sign-In
+	Dado Que acesso a homepage do IMDb
+	E clico em Sign In
+	E clico em Sign in with IMDb
+	Quando realizo login inserindo credenciais <email> e <senha>
 	Entao valido mensagem <mensagem>
 
 	Exemplos: 

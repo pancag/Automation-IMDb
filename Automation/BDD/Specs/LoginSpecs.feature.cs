@@ -77,15 +77,6 @@ namespace Automation.BDD.Specs
         {
 #line 5
 #line hidden
-#line 6
- testRunner.Given("Que acesso a homepage do IMDb", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
-#line hidden
-#line 7
- testRunner.And("clico em Sign In", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
-#line 8
- testRunner.And("clico em Sign in with IMDb", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
@@ -107,7 +98,7 @@ namespace Automation.BDD.Specs
             }
             string[] tagsOfScenario = @__tags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1.1_Efetuar Login (Validacoes)", null, @__tags);
-#line 11
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -130,11 +121,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
+#line 10
+ testRunner.Given("Que acesso a homepage do IMDb", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 11
+ testRunner.And("clico em Sign In", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
 #line 12
- testRunner.When(string.Format("informo email {0} e senha {1}", email, senha), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+ testRunner.And("clico em Sign in with IMDb", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 13
- testRunner.And("clico em Sign-In", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.When(string.Format("realizo login inserindo credenciais {0} e {1}", email, senha), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
 #line hidden
 #line 14
  testRunner.Then(string.Format("valido mensagem {0}", mensagem), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");

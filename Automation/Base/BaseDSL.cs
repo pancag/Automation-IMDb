@@ -58,6 +58,22 @@ namespace Automation.Base
             }
         }
 
+        public string GetElementProperty(By by, string property, bool print = false)
+        {
+            try
+            {
+                return waitHelper.WaitUntilVisible(by, (int)DefaultWaitTimes.GET_TEXT).GetProperty(property);
+            }
+            catch (Exception)
+            {
+                throw new Exception($"Erro ao obter propriedade de elemento.\nBy: {by.ToString()}");
+            }
+            finally
+            {
+                if (print) BaseTestBDD.reportHelper.AddScreenCapture(BaseTestBDD.printPath);
+            }
+        }
+
         public string GetElementText(By by, bool print = false)
         {
             try
@@ -129,14 +145,12 @@ namespace Automation.Base
 
         public void ValidAssertIsTrue(By by, bool print = true)
         {
-            try
-            {
-                Assert.IsTrue(IsElementVisible(by));
-            }
-            catch (ElementNotVisibleException e)
-            {
-                throw new ElementNotVisibleException($"Erro ao encontrar elemento.\n{e.Message}");
-            }
+            Assert.IsTrue(IsElementVisible(by));
+        }
+
+        public void ValidAssertIsFalse(By by, bool print = true)
+        {
+            Assert.IsFalse(IsElementVisible(by));
         }
         public void ValidAssertAreEqual(object xpath, object value, bool print = true)
         {
@@ -182,12 +196,32 @@ namespace Automation.Base
             catch (Exception)
             {
                 return false;
-                throw;
             }
             finally
             {
                 if (print) BaseTestBDD.reportHelper.AddScreenCapture(BaseTestBDD.printPath);
             }
+        }
+
+        public bool IsElementNotVisible(By by, bool print = true)
+        {
+            try
+            {
+                return !waitHelper.WaitElementExists(by, (int)DefaultWaitTimes.GET_TEXT).Displayed;
+            }
+            catch (Exception)
+            {
+                return true;
+            }
+            finally
+            {
+                if (print) BaseTestBDD.reportHelper.AddScreenCapture(BaseTestBDD.printPath);
+            }
+        }
+
+        public void RefreshPage()
+        {
+            driver.Navigate().Refresh();
         }
 
         public void AguardarElementoAparecer(By by)

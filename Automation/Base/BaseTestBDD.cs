@@ -20,7 +20,7 @@ namespace Automation.Base
         public static string printPath;
         public static IWebDriver driver;
         public static FeatureContext _featureContext;
-        public DSLIMDb dlsIMDb = new DSLIMDb();
+        public DSLIMDb dslIMDb = new DSLIMDb();
         private static ExtentTest step;
 
         [BeforeTestRun]
@@ -59,7 +59,7 @@ namespace Automation.Base
         public static void AfterTestRun()
         {
             //Open report after test run
-            reportHelper.OpenCreatedReport(); 
+            //reportHelper.OpenCreatedReport(); 
         }
 
         [AfterScenario]
