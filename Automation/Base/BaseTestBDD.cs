@@ -59,7 +59,7 @@ namespace Automation.Base
         public static void AfterTestRun()
         {
             //Open report after test run
-            //reportHelper.OpenCreatedReport(); 
+            reportHelper.OpenCreatedReport(); 
         }
 
         [AfterScenario]
