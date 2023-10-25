@@ -12,7 +12,7 @@ Após a instalação do [Visual Studio] você deve instalar a extensão do [Spec
 2. Clique no menu `Extensions`.
 3. Depois na opção `Manage Extensions`.
 4. Seleciona a opção `Visual Studio Marketplace` no lado esquerdo da janela e digite no campo de busca `Specflow` e aperte enter.
-5. Instale a extensão `SpecFlow for Visual Studio 2019` e siga o procedimento de instalação.
+5. Instale a extensão `SpecFlow for Visual Studio` e siga o procedimento de instalação.
 
 ![vs-specflow-extension](docs/vs-specflow-extension.png)
 
